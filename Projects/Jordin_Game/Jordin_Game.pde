@@ -18,7 +18,7 @@ void draw() {
     stroke(255, 255, 0);
     ellipse (width/4, height/2, 250, 250);
   }
-  if (MenuNavigation == 2) {
+  if (MenuNavigation2 == 2) {
     fill(255, 198, 153);
     strokeWeight(20);
     stroke(255, 255, 0);
@@ -63,6 +63,32 @@ void draw() {
   fill(random(255), 0, 0);
   textSize(60);
   text("Exit D:", width/2+370, height/2);
+  
+   if (MenuNavigation == MenuNavigation2 ) {  // act 1
+      background(135,206,235);
+      fill (181,101,29);
+      stroke(80,220,100);
+      rect(0,1000,1500,1500);
+      noStroke();
+      fill(0,0,139);
+      ellipse(random(50,1350),random(850,950),70,70);
+      
+     fill(255,255,0);
+     ellipse(1450,90,200,200);
+   }
+       if (MenuNavigation2 == MenuNavigation3) {//act 2
+         
+         background(20,24,82);
+      fill (181,101,29);
+      stroke(80,180,100);
+      rect(0,1000,1500,1500);
+      noStroke();
+      fill(0,0,139);
+      ellipse(random(50,1350),random(850,950),70,70);
+      
+     fill(202);
+     ellipse(1450,90,200,200);
+    }
 }
 
 
@@ -89,9 +115,9 @@ void keyPressed() {
     }
   }
       if (key == ' ') { //Opens Act 2
-    if (MenuNavigation == 2) {
-      MenuNavigation2= MenuNavigation2;
-      background(20,24,82);
+    if (MenuNavigation2 == 2) {
+      MenuNavigation2 = 1;
+      /*background(20,24,82);
       fill (181,101,29);
       stroke(80,180,100);
       rect(0,1000,1500,1500);
@@ -105,8 +131,7 @@ void keyPressed() {
       }
       if (key == ' ') { //Opens Act 1
     if (MenuNavigation == 1) {  
-      MenuNavigation3 = MenuNavigation3;
-      background(135,206,235);
+     /* background(135,206,235);
       fill (181,101,29);
       stroke(80,220,100);
       rect(0,1000,1500,1500);
@@ -117,7 +142,8 @@ void keyPressed() {
      fill(255,255,0);
      ellipse(1450,90,200,200);
       
-    }
+    }*/
     println(MenuNavigation);
   }
+}
   }
